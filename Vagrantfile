@@ -14,13 +14,11 @@ Vagrant.configure(2) do |config|
     # NFS: Make sure to enable UDP for NFSv3 on the host and set sudo rules:
     # https://developer.hashicorp.com/vagrant/docs/synced-folders/nfs#root-privilege-requirement
     config.vm.synced_folder ".", "/vagrant", type: "rsync"
-    config.vm.synced_folder "code/", "/etc/puppetlabs/code/", type: "rsync"
+    config.vm.synced_folder "k12sysadmin-control-repo/", "/etc/puppetlabs/code/", type: "rsync"
     config.vm.synced_folder "r10k/", "/etc/puppetlabs/r10k/", type: "rsync"
   end
 
   # Provisioning scripts
-
-  config.vm.provision "shell", path: "bootstrap.sh"
   config.vm.provision "shell", path: "r10k.sh"
 
 end
