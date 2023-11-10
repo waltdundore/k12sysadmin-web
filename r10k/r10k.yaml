@@ -1,0 +1,4 @@
+:sources:
+  :k12sysadmin:
+    remote: '/vagrant/code'
+    basedir: '/etc/puppetlabs/code/environments'
