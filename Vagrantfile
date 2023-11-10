@@ -4,7 +4,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "rockylinux/9"
   config.vm.hostname = 'www.k12sysadmin.net'
   config.vm.network :private_network, type: 'dhcp'
-  config.ssh.forward_agent = 'true'
+  config.ssh.forward_agent = true
 
   # Libvirt settings
   config.vm.provider :libvirt do |libvirt|
