@@ -1,6 +1,5 @@
 Vagrant.configure(2) do |config|
 
- # config.vm.box_url = 'http://software.apidb.org/vagrant/centos-7-64-puppet.json'
   config.vm.box = "rockylinux/9"
   config.vm.hostname = 'www.k12sysadmin.net'
   config.vm.network :private_network, type: 'dhcp'
